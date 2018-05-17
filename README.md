@@ -21,22 +21,24 @@ Even though beats 99.25% of submissions, I think it can be faster or cleaner by 
    
    
    #### Example:
-   var reverseLinkedList = function(linkedlist) {
+    var reverseLinkedList = function(linkedlist) {
    
-    var node = linkedlist;
-    var previous = null;
+      var node = linkedlist;
+      var previous = null;
 
-    while(node) {
+      while(node) {
     
-    var save = node.next;
+        var save = node.next;
     
-    node.next = previous;
+        node.next = previous;
    
-    previous = node;
+        previous = node;
     
-    node = save;
-    }
-  return previous;   // Change the list head !!!
+        node = save;
+      }
+      
+      return previous;   // Change the list head !!!
   
-}
-linkedlist = reverseLinkedList(linkedlist);
+    }
+    
+    linkedlist = reverseLinkedList(linkedlist);
