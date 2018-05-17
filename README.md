@@ -12,7 +12,7 @@ A linked list can be reversed either iteratively or recursively. Could you imple
 
 ## Personal Notes
 
-Can be faster by actually reversing the node orders. This can be done by:
+Even though beats 99.25% of submissions, I think it can be faster or cleaner by actually reversing the node orders. This can be done by:
 
   1. Saving Next
   2. Pointing Current node to previous
@@ -22,19 +22,21 @@ Can be faster by actually reversing the node orders. This can be done by:
    
    #### Example:
    var reverseLinkedList = function(linkedlist) {
-  var node = linkedlist;
-  var previous = null;
+   
+    var node = linkedlist;
+    var previous = null;
 
-  while(node) {
-    // save next or you lose it!!!
+    while(node) {
+    
     var save = node.next;
-    // reverse pointer
+    
     node.next = previous;
-    // increment previous to current node
+   
     previous = node;
-    // increment node to next node or null at end of list
+    
     node = save;
-  }
+    }
   return previous;   // Change the list head !!!
+  
 }
 linkedlist = reverseLinkedList(linkedlist);
